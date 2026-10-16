@@ -1,0 +1,25 @@
+# ---------- required ----------
+websockets>=13.0
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+openpyxl>=3.1        # .xlsx
+xlrd>=2.0            # .xls (old Excel)
+
+# ---------- language model (Apple Silicon) ----------
+mlx-lm>=0.25        # Qwen3 support
+mlx-vlm>=0.1.20; python_version >= "3.10"     # pictures and "what's on my screen" (needs Python 3.10+)
+Pillow>=10.0
+
+# ---------- optional, each switches on a feature ----------
+psutil>=5.9          # real CPU / memory / battery in the HUD
+pypdf>=4.0           # ask questions about PDF files
+pyarrow>=14.0        # .parquet datasets
+
+# Voice (pick one; JARVIS uses the best one it finds, then falls back):
+#   edge-tts             online neural British voice (en-GB-RyanNeural)
+#   nothing              macOS built-in "say" (Daniel), then the browser voice
+edge-tts>=6.1
+
+# Cloud brain (optional): Claude through the Anthropic API. Needs ANTHROPIC_API_KEY in .env.
+anthropic>=0.40
